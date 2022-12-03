@@ -1,0 +1,22 @@
+.auth_container {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  .auth_wrap {
+    margin: auto;
+    padding: 1em 2em;
+
+    background-color: rgba(0, 0, 0, 0.03);
+    box-shadow: 0 0 0.5px 0.5px rgba(0, 0, 0, 0.13);
+    border-radius: 1em;
+
+    .logo {
+      margin-bottom: 24px;
+
+      color: $blue;
+      text-align: center;
+    }
+  }
+}
