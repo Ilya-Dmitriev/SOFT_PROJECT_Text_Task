@@ -4,3 +4,10 @@ export interface IPost {
   title: string;
   body: string;
 }
+
+export const nullPost: IPost = {
+  userId: NaN,
+  id: NaN,
+  title: "Not found",
+  body: "Not found",
+};

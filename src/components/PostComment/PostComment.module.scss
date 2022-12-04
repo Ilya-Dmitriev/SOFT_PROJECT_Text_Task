@@ -1,0 +1,34 @@
+.comment {
+  margin: 1em 1em 0 1em;
+  background-color: $gray_back;
+
+  .content {
+    padding: 0.5em 1em;
+
+    .head {
+      display: flex;
+      gap: 1em;
+      align-items: baseline;
+
+      .email {
+        font-size: 1.2em;
+        font-weight: 600;
+      }
+
+      .name {
+        color: $blue_dark;
+        font-weight: 500;
+
+        &::first-letter {
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+
+  .body {
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+}

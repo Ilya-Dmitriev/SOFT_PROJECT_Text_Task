@@ -58,6 +58,7 @@
     "postcss-sort-media-queries": "^3.11.12",
     "prettier": "^2.7.1",
     "prettier-package-json": "^2.6.4",
+    "react-infinite-scroll-component": "^6.1.0",
     "react-refresh": "^0.14.0",
     "redux-persist": "^6.0.0",
     "sass": "^1.38.0",

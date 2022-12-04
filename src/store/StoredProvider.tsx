@@ -16,6 +16,8 @@ import {
 import storage from "redux-persist/lib/storage";
 import { PersistGate } from "redux-persist/integration/react";
 import { Loader } from "../pages/Loader/Loader";
+import { postsAPI } from "../servises/PostsServise";
+import { usersAPI } from "../servises/UsersServise";
 
 interface StoredProviderProps {
   children: React.ReactNode;
@@ -24,9 +26,14 @@ interface StoredProviderProps {
 const persistConfig = {
   key: "root",
   storage,
+  blacklist: [postsAPI.reducerPath, usersAPI.reducerPath],
 };
 
-const rootReducer = combineReducers(redusers);
+const rootReducer = combineReducers({
+  ...redusers,
+  [postsAPI.reducerPath]: postsAPI.reducer,
+  [usersAPI.reducerPath]: usersAPI.reducer,
+});
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
@@ -38,7 +45,9 @@ const setapStore = () => {
         serializableCheck: {
           ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
         },
-      }),
+      })
+        .concat(postsAPI.middleware)
+        .concat(usersAPI.middleware),
   });
 };
 

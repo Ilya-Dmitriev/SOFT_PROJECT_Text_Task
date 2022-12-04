@@ -22,6 +22,9 @@ export const authSlise = createSlice({
       state.isLoading = false;
       state.error = action.payload;
     },
+    clearAuthTocken(state) {
+      state.authToken = "";
+    },
   },
 });
 

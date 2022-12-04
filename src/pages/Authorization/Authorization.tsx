@@ -2,7 +2,7 @@ import { Typography } from "antd";
 import { AuthForm } from "components";
 import { Navigate } from "react-router-dom";
 import { useAppDispach, useAppSelector } from "../../hooks/redux";
-import { fetchAuth } from "../../store/actions/fetchAuth";
+import { fetchAuth } from "../../store/actionsCreators/fetchAuth";
 import classes from "./Authorization.module.scss";
 
 const Authorization = () => {
