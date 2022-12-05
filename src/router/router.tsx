@@ -7,7 +7,7 @@ const AutorisationLazy = lazy(
   () => import("../pages/Authorization/Authorization"),
 );
 const PostsLazy = lazy(() => import("../pages/Posts/Posts"));
-const AlbomsLazy = lazy(() => import("../pages/Alboms/Alboms"));
+const AlbumsLazy = lazy(() => import("../pages/Albums/Albums"));
 const TodosLazy = lazy(() => import("../pages/Todos/Todos"));
 
 export const routesInLayouts = [
@@ -40,13 +40,13 @@ export const routesInLayouts = [
         path: "/posts/*",
       },
       {
-        key: "adboms",
+        key: "adbums",
         element: (
           <ProtectedRoute>
-            <AlbomsLazy />
+            <AlbumsLazy />
           </ProtectedRoute>
         ),
-        path: "/alboms/*",
+        path: "/albums/*",
       },
       {
         key: "todos",

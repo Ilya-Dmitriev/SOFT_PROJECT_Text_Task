@@ -24,10 +24,10 @@ export const NavLayout: React.FC = () => {
               Menu
             </Typography.Title>
             <NavBarLink to="posts">Posts</NavBarLink>
-            <NavBarLink to="alboms">Alboms</NavBarLink>
+            <NavBarLink to="albums">Albums</NavBarLink>
             <NavBarLink to="todos">Todos</NavBarLink>
           </nav>
-          <Popover placement="right" content={"Выйти"}>
+          <Popover placement="right" content={"Logout"}>
             <NavLink to="/" onClick={logout}>
               <LogoutOutlined className={classes.icon_out} />
             </NavLink>

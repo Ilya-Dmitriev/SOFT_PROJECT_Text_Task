@@ -46,7 +46,7 @@ const Posts = () => {
         </InfiniteScroll>
       )}
       <Typography.Title level={4} className={classes.footer}>
-        End of Comments
+        End of Posts
       </Typography.Title>
     </div>
   );

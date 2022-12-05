@@ -1,0 +1,110 @@
+.album_item {
+  margin: 1em;
+  padding: 1em;
+  min-height: 200px;
+
+  position: relative;
+
+  background-color: $gray_back;
+  box-shadow: 0 0 0.5px 0.5px $gray_shadow;
+
+  .album_head {
+    padding: 1em;
+    padding-right: 0;
+    margin-right: calc(240px + 2em);
+
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    .content {
+      flex: 1;
+
+      .album_title {
+        font-size: 2em;
+        font-weight: 700;
+
+        &::first-letter {
+          text-transform: capitalize;
+        }
+      }
+
+      .user {
+        display: flex;
+        align-items: baseline;
+
+        .user_name {
+          font-size: 1.1em;
+          font-weight: 600;
+          color: $blue;
+        }
+
+        .user_email {
+          margin-left: 2em;
+          font-style: italic;
+          font-weight: 600;
+          color: rgba(0, 0, 0, 0.496);
+        }
+      }
+    }
+  }
+
+  .carousel {
+    display: flex;
+    gap: 2em;
+    align-items: flex-end;
+
+    .content {
+      flex: 1;
+
+      display: flex;
+
+      .content_header {
+        font-style: italic;
+      }
+
+      .photo_title {
+        margin-left: 1em;
+        margin-bottom: 1em;
+        font-weight: 600;
+
+        &::first-letter {
+          text-transform: capitalize;
+        }
+      }
+    }
+
+    .img_container {
+      box-sizing: content-box;
+      padding: 20px;
+      width: 200px;
+      height: 200px;
+
+      .img_wrap {
+        width: 200px;
+        height: 200px;
+
+        position: relative;
+
+        .back_btn {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+
+          transform: translate3d(-50%, 50%, 0);
+        }
+
+        .next_btn {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+
+          transform: translate3d(50%, 50%, 0);
+        }
+      }
+    }
+  }
+}
