@@ -5,3 +5,4 @@ export { PostItem } from "./PostItem/PostItem";
 export { NavBarLink } from "./NavBarLink/NavBarLink";
 export { PostComment } from "./PostComment/PostComment";
 export { AlbumItem } from "./AlbumItem/AlbumItem";
+export { TodoItem } from "./TodoItem/TodoItem";

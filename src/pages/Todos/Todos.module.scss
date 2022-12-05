@@ -1,0 +1,19 @@
+.todos_container {
+  padding: 1em;
+
+  display: flex;
+  gap: 1em;
+
+  .completed,
+  .non_completed {
+    flex: 1;
+
+    background-color: $gray_back;
+    box-shadow: $gray_shadow;
+
+    .list_header {
+      margin-top: 0.5em;
+      text-align: center;
+    }
+  }
+}

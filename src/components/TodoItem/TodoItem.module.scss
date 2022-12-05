@@ -1,0 +1,32 @@
+.todo_item {
+  margin-bottom: 1em;
+  padding: 1em;
+
+  background-color: $gray_back;
+
+  .header {
+    display: flex;
+    align-items: baseline;
+
+    .id {
+      font-weight: 700;
+      font-size: 1.1em;
+    }
+
+    .user_name {
+      margin-left: 1em;
+
+      color: $blue;
+      font-weight: 600;
+      font-size: 1.1em;
+    }
+  }
+
+  .title {
+    font-style: italic;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+}

@@ -19,6 +19,7 @@ import { Loader } from "../pages/Loader/Loader";
 import { postsAPI } from "../servises/PostsServise";
 import { usersAPI } from "../servises/UsersServise";
 import { albumsAPI } from "../servises/AlbomsServise";
+import { todosAPI } from "../servises/TodosServise";
 
 interface StoredProviderProps {
   children: React.ReactNode;
@@ -31,6 +32,7 @@ const persistConfig = {
     postsAPI.reducerPath,
     usersAPI.reducerPath,
     albumsAPI.reducerPath,
+    todosAPI.reducerPath,
   ],
 };
 
@@ -39,6 +41,7 @@ const rootReducer = combineReducers({
   [postsAPI.reducerPath]: postsAPI.reducer,
   [usersAPI.reducerPath]: usersAPI.reducer,
   [albumsAPI.reducerPath]: albumsAPI.reducer,
+  [todosAPI.reducerPath]: todosAPI.reducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -54,7 +57,8 @@ const setapStore = () => {
       })
         .concat(postsAPI.middleware)
         .concat(usersAPI.middleware)
-        .concat(albumsAPI.middleware),
+        .concat(albumsAPI.middleware)
+        .concat(todosAPI.middleware),
   });
 };
 
