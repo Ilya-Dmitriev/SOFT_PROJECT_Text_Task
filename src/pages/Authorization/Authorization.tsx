@@ -1,19 +1,12 @@
 import { Typography } from "antd";
 import { AuthForm } from "components";
-import { Navigate } from "react-router-dom";
 import { useAppDispach, useAppSelector } from "../../hooks/redux";
 import { fetchAuth } from "../../store/actionsCreators/fetchAuth";
 import classes from "./Authorization.module.scss";
 
 const Authorization = () => {
   const dispatch = useAppDispach();
-  const { authToken, isLoading, error } = useAppSelector(
-    (state) => state.authReduser,
-  );
-
-  if (authToken) {
-    return <Navigate to="/posts" replace />;
-  }
+  const { isLoading, error } = useAppSelector((state) => state.authReduser);
 
   return (
     <div className={classes.auth_container}>

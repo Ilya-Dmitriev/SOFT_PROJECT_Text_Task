@@ -10,6 +10,8 @@ const PostsLazy = lazy(() => import("../pages/Posts/Posts"));
 const AlbumsLazy = lazy(() => import("../pages/Albums/Albums"));
 const TodosLazy = lazy(() => import("../pages/Todos/Todos"));
 
+export const deployPath = "SOFT_PROJECT_Text_Task";
+
 export const routesInLayouts = [
   {
     key: "clean_layout",
@@ -18,11 +20,11 @@ export const routesInLayouts = [
       {
         key: "auth",
         element: (
-          <AuthRoute path="/posts">
+          <AuthRoute path={"posts"}>
             <AutorisationLazy />
           </AuthRoute>
         ),
-        path: "/",
+        path: "/" + deployPath,
       },
     ],
   },
@@ -37,7 +39,7 @@ export const routesInLayouts = [
             <PostsLazy />
           </ProtectedRoute>
         ),
-        path: "/posts/*",
+        path: deployPath + "/posts/*",
       },
       {
         key: "adbums",
@@ -46,7 +48,7 @@ export const routesInLayouts = [
             <AlbumsLazy />
           </ProtectedRoute>
         ),
-        path: "/albums/*",
+        path: deployPath + "/albums/*",
       },
       {
         key: "todos",
@@ -55,7 +57,7 @@ export const routesInLayouts = [
             <TodosLazy />
           </ProtectedRoute>
         ),
-        path: "/todos",
+        path: deployPath + "/todos",
       },
     ],
   },

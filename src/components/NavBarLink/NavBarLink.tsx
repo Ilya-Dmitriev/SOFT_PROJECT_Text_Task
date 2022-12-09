@@ -1,5 +1,6 @@
 import { Button, Typography } from "antd";
 import { Link, useLocation } from "react-router-dom";
+import { deployPath } from "../../router/router";
 
 import classes from "./NavBarLink.module.scss";
 
@@ -10,10 +11,10 @@ export const NavBarLink = ({
   children: React.ReactNode;
   to: string;
 }) => {
-  const isActive = useLocation().pathname === "/" + to;
+  const isActive = useLocation().pathname === "/" + deployPath + "/" + to;
 
   return (
-    <Link to={to} className={classes.link}>
+    <Link to={deployPath + "/" + to} className={classes.link}>
       <Button
         size="small"
         shape="round"

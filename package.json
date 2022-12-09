@@ -3,6 +3,7 @@
   "name": "sreda_market",
   "version": "1.0.0",
   "license": "MIT",
+  "homepage": "https://ilya-dmitriev.github.io/SOFT_PROJECT_Text_Task/",
   "author": "Ilya",
   "scripts": {
     "build": "cross-env NODE_ENV=prod webpack --config webpack/webpack.config.js",
@@ -11,12 +12,15 @@
     "format:style": "stylelint \"src/**/*.scss\" --cache --fix",
     "serve": "cross-env NODE_ENV=dev SERV=true webpack serve --open --config webpack/webpack.config.js",
     "start": "cross-env NODE_ENV=dev SERV=true webpack serve --config webpack/webpack.config.js",
-    "stats": "cross-env NODE_ENV=prod webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json"
+    "stats": "cross-env NODE_ENV=prod webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.0",
     "axios": "^0.27.2",
     "clsx": "^1.2.1",
+    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",

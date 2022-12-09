@@ -8,6 +8,7 @@ import { NavBarLink } from "components";
 
 import "antd/dist/antd.css";
 import classes from "./NavLayout.module.scss";
+import { deployPath } from "../../router/router";
 
 export const NavLayout: React.FC = () => {
   const dispatch = useAppDispach();
@@ -28,7 +29,7 @@ export const NavLayout: React.FC = () => {
             <NavBarLink to="todos">Todos</NavBarLink>
           </nav>
           <Popover placement="right" content={"Logout"}>
-            <NavLink to="/" onClick={logout}>
+            <NavLink to={"/" + deployPath} onClick={logout}>
               <LogoutOutlined className={classes.icon_out} />
             </NavLink>
           </Popover>
