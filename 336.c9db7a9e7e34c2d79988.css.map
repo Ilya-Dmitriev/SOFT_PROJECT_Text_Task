@@ -1,0 +1,1 @@
+{"version":3,"file":"336.c9db7a9e7e34c2d79988.css","mappings":"AAEE,wCACE,kBACA,gB","sources":["webpack:///./pages/Albums/Albums.module.scss"],"sourcesContent":["@import \"variables\"; @import \"mixins\";\n.albums_container {\n  .footer {\n    text-align: center;\n    padding: 1em 2em;\n  }\n}\n"],"names":[],"sourceRoot":""}

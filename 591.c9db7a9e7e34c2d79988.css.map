@@ -1,0 +1,1 @@
+{"version":3,"file":"591.c9db7a9e7e34c2d79988.css","mappings":"AAEE,uCACE,kBACA,gB","sources":["webpack:///./pages/Posts/Posts.module.scss"],"sourcesContent":["@import \"variables\"; @import \"mixins\";\n.posts_container {\n  .footer {\n    text-align: center;\n    padding: 1em 2em;\n  }\n}\n"],"names":[],"sourceRoot":""}
